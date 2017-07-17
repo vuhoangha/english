@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="text" style="text-align: center; font-size: 40px; font-weight: bold; margin-top: 100px;"></div>
+    <button onclick="ahihi()" style="border: 0px;border-radius: 10px;padding: 10px;font-size: 20px;margin-left: 46%;margin-top: 50px; cursor: pointer; outline: none;">New Word</button>
+    <script>
+        function ahihi() {
+            $.getJSON('http://localhost:3000/',
+                function (data, err) {
+                    document.getElementById("text").innerHTML = data;
+                });
+        }
+        ahihi();
+    </script>
+</body>
+
+</html>
